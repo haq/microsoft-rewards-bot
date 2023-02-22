@@ -8,4 +8,4 @@ export DBUS_SESSION_BUS_ADDRESS=/dev/null
 Xvfb :99 -screen 0 640x480x8 -nolisten tcp &
 
 # start the script
-python3 ms_rewards_farmer.py --fast --autoexit
+exec "$@"

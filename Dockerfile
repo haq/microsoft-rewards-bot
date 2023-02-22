@@ -20,3 +20,6 @@ RUN pip install -r requirements.txt
 
 #
 ENTRYPOINT ["/app/entrypoint.sh"]
+
+#
+CMD ["python3", "ms_rewards_farmer.py", "--fast", "--autoexit"]
