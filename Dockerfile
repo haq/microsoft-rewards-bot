@@ -12,11 +12,11 @@ WORKDIR /app
 # clone the project
 RUN git clone https://github.com/farshadz1997/Microsoft-Rewards-bot.git ./
 
-# copy over entrypoint script
-COPY entrypoint.sh ./
-
 # install dependencies
 RUN pip install -r requirements.txt
+
+# copy over entrypoint script
+COPY entrypoint.sh ./
 
 #
 ENTRYPOINT ["/app/entrypoint.sh"]
