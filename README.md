@@ -1,4 +1,4 @@
-[![create and publish docker image](https://github.com/haq/microsoft-rewards-bot/workflows/docker-publish.yml/badge.svg)](https://github.com/haq/microsoft-rewards-bot/actions/workflows/docker-publish.yml)
+[![create and publish docker image](https://github.com/haq/microsoft-rewards-bot/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/haq/microsoft-rewards-bot/actions/workflows/docker-publish.yml)
 
 # microsoft-rewards-bot
 
