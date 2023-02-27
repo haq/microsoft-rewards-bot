@@ -5,7 +5,7 @@
 ## docker-cli
 ```sh
 docker run --rm -it \
-  --shm-size 2g \
+  --shm-size 4g \
   -v "$PWD"/accounts.json:/app/accounts.json \
   ghcr.io/haq/microsoft-rewards-bot
 ```
