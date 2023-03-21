@@ -26,4 +26,4 @@ COPY entrypoint.sh ./
 ENTRYPOINT ["/app/entrypoint.sh"]
 
 #
-CMD ["python3", "ms_rewards_farmer.py", "--superfast", "--on-finish", "exit"]
+CMD ["python3", "ms_rewards_farmer.py", "--fast", "--on-finish", "exit"]
