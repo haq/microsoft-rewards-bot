@@ -1,9 +1,13 @@
-FROM python:alpine
+FROM alpine:edge
 
 # install required pacakges
 RUN apk --no-cache add \
+    chromium \
     chromium-chromedriver \
     git \
+    python3 \
+    python3-tkinter \
+    py3-pip \
     xvfb
 
 # create the app directory
@@ -22,4 +26,4 @@ COPY entrypoint.sh ./
 ENTRYPOINT ["/app/entrypoint.sh"]
 
 #
-CMD ["python3", "ms_rewards_farmer.py", "--fast", "--autoexit"]
+CMD ["python3", "ms_rewards_farmer.py", "--superfast", "--on-finish", "exit"]
