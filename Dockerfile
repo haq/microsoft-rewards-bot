@@ -26,4 +26,4 @@ COPY entrypoint.sh ./
 ENTRYPOINT ["/app/entrypoint.sh"]
 
 #
-CMD ["python3", "ms_rewards_farmer.py", "--no-images", "--dont-check-for-updates", "--fast", "--on-finish", "exit"]
+CMD ["python3", "ms_rewards_farmer.py", "--no-images", "--dont-check-for-updates", "--fast", "--skip-unusual", "--no-webdriver-manager", "--on-finish", "exit"]
