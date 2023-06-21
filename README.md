@@ -49,10 +49,6 @@ services:
       - net.ipv4.conf.all.src_valid_mark=1
       - net.ipv4.ip_forward=1
       - net.ipv6.conf.all.disable_ipv6=1
-    environment:
-      - PUID=0
-      - PGID=0
-      - TZ=Etc/UTC
     volumes:
       - ./wg0.conf:/config/wg0.conf
     restart: unless-stopped
@@ -88,7 +84,17 @@ DNS =
 [Peer]
 PublicKey =
 PresharedKey =
-AllowedIPs = 0.0.0.0/0, ::/0
+AllowedIPs = 0.0.0.0/0
 PersistentKeepalive = 25
 Endpoint =
+```
+
+### crontab
+
+- It is recommended that you randomize the time each script is run.
+- Also take note of how long the script takes to run. There should be no overlap.
+
+```crontab
+0 4 * * * docker start rewards_home
+0 5 * * * docker start rewards_vpn
 ```
