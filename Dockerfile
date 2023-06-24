@@ -14,7 +14,7 @@ RUN apk --no-cache add \
 WORKDIR /app
 
 # clone the project
-RUN git clone https://github.com/farshadz1997/Microsoft-Rewards-bot.git ./
+RUN git clone https://gitlab.com/farshadzargary1997/Microsoft-Rewards-bot.git ./
 
 # install dependencies
 RUN pip install -r requirements.txt
