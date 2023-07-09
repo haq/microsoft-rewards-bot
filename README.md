@@ -1,8 +1,8 @@
-[![create and publish docker image](https://github.com/haq/microsoft-rewards-bot/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/haq/microsoft-rewards-bot/actions/workflows/docker-publish.yml)
+> Ever since the takedown of the original [GitHub](https://github.com/farshadz1997/Microsoft-Rewards-bot) repository, this image has been migrated over to use the [GitLab](https://gitlab.com/farshadzargary1997/Microsoft-Rewards-bot) one. But it seems to me that the GitLab one is not as updated and has multiple open [issues](https://gitlab.com/farshadzargary1997/Microsoft-Rewards-bot/-/issues).
 
 # microsoft-rewards-bot
 
-[farshadz1997/Microsoft-Rewards-bot](https://gitlab.com/farshadzargary1997/Microsoft-Rewards-bot.git) but dockerized.
+[farshadz1997/Microsoft-Rewards-bot](https://gitlab.com/farshadzargary1997/Microsoft-Rewards-bot) but dockerized.
 
 ## docker-cli
 
