@@ -21,9 +21,14 @@ RUN pip install -r requirements.txt
 
 # copy over entrypoint script
 COPY entrypoint.sh ./
+RUN chmod +x entrypoint.sh
+
+# copy run farmer script
+COPY run-farmer.sh ./
+RUN chmod +x run-farmer.sh
 
 #
 ENTRYPOINT ["/app/entrypoint.sh"]
 
 #
-CMD ["python3", "ms_rewards_farmer.py", "--no-images", "--dont-check-for-updates", "--fast", "--skip-unusual", "--no-webdriver-manager", "--on-finish", "exit"]
+CMD ["/app/run-farmer.sh"]
