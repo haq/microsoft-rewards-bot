@@ -1,11 +1,7 @@
-FROM python:alpine
+FROM python
 
 # install required pacakges
-RUN apk --no-cache add \
-    gcc \
-    git \
-    libc-dev \
-    xvfb
+RUN apt update && apt install -y chromium xvfb
 
 # create the app directory
 WORKDIR /app
