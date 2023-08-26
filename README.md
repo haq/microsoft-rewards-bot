@@ -8,7 +8,7 @@
 
 # microsoft-rewards-bot
 
-[farshadz1997/Microsoft-Rewards-bot](https://gitlab.com/farshadzargary1997/Microsoft-Rewards-bot) but dockerized.
+[charlesbel/Microsoft-Rewards-Farmer](https://github.com/charlesbel/Microsoft-Rewards-Farmer) but dockerized.
 
 ## docker-cli
 
