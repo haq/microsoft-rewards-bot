@@ -1,4 +1,6 @@
-> Ever since the takedown of the original [GitHub](https://github.com/farshadz1997/Microsoft-Rewards-bot) repository, this image has been migrated over to use the [GitLab](https://gitlab.com/farshadzargary1997/Microsoft-Rewards-bot) one. But it seems to me that the GitLab one is not as updated and has multiple open [issues](https://gitlab.com/farshadzargary1997/Microsoft-Rewards-bot/-/issues).
+> June 24, 2023 - Ever since the takedown of the original [GitHub](https://github.com/farshadz1997/Microsoft-Rewards-bot) repository, this image has been migrated over to use the [GitLab](https://gitlab.com/farshadzargary1997/Microsoft-Rewards-bot) one. But it seems to me that the GitLab one is not as updated and has multiple open [issues](https://gitlab.com/farshadzargary1997/Microsoft-Rewards-bot/-/issues).
+
+> August 18, 2023 -  Migrated image over to utilize [charlesbel/Microsoft-Rewards-Farmer](https://github.com/charlesbel/Microsoft-Rewards-Farmer) since [farshadzargary1997/Microsoft-Rewards-bot](https://gitlab.com/farshadzargary1997/Microsoft-Rewards-bot) has been abandoned.
 
 ![create and publish docker image](https://github.com/haq/microsoft-rewards-bot/actions/workflows/docker-publish.yml/badge.svg)
 ![Docker image size](https://ghcr-badge.egpl.dev/haq/microsoft-rewards-bot/size)
@@ -55,6 +57,10 @@ services:
       - net.ipv6.conf.all.disable_ipv6=1
     volumes:
       - ./wg0.conf:/config/wg0.conf
+    healthcheck:
+      test: [ "CMD", "ping", "-c", "1", "google.com" ]
+      retries: 3
+      timeout: 5s
     restart: unless-stopped
 ```
 
@@ -62,18 +68,19 @@ services:
 
 ```json
 [
-  {
-    "username": "account-1@mail.com",
-    "password": "password-1"
-  },
-  {
-    "username": "account-2@mail.com",
-    "password": "password-2"
-  },
-  {
-    "username": "account-3@mail.com",
-    "password": "password-3"
-  }
+   {
+      "username":"account-1@mail.com",
+      "password":"password-1"
+   },
+   {
+      "username":"account-2@mail.com",
+      "password":"password-2",
+      "proxy":"http://user:pass@host2:port"
+   },
+   {
+      "username":"account-3@mail.com",
+      "password":"password-3"
+   }
 ]
 ```
 
