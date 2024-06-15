@@ -2,13 +2,15 @@
 
 > August 18, 2023 -  Migrated image over to utilize [charlesbel/Microsoft-Rewards-Farmer](https://github.com/charlesbel/Microsoft-Rewards-Farmer) since [farshadzargary1997/Microsoft-Rewards-bot](https://gitlab.com/farshadzargary1997/Microsoft-Rewards-bot) has been abandoned.
 
+> June 15, 2024 -  Migrated image over to utilize [klept0/Microsoft-Rewards-Farmer](https://github.com/klept0/MS-Rewards-Farmer.git) since [charlesbel/Microsoft-Rewards-Farmer](https://github.com/charlesbel/Microsoft-Rewards-Farmer) has been abandoned.
+
 ![create and publish docker image](https://github.com/haq/microsoft-rewards-bot/actions/workflows/docker-publish.yml/badge.svg)
 ![Docker image size](https://ghcr-badge.egpl.dev/haq/microsoft-rewards-bot/size)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/haq/microsoft-rewards-bot)
 
 # microsoft-rewards-bot
 
-[charlesbel/Microsoft-Rewards-Farmer](https://github.com/charlesbel/Microsoft-Rewards-Farmer) but dockerized.
+[klept0/Microsoft-Rewards-Farmer](https://github.com/klept0/MS-Rewards-Farmer.git) but dockerized.
 
 ## docker-cli
 
