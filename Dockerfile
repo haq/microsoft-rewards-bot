@@ -6,7 +6,7 @@ RUN apt update && apt install -y google-chrome-stable xvfb
 
 WORKDIR /app
 
-RUN git clone https://github.com/klept0/MS-Rewards-Farmer.git ./
+RUN git clone -b develop https://github.com/klept0/MS-Rewards-Farmer.git ./
 RUN pip install --root-user-action=ignore  -r requirements.txt
 
 COPY entrypoint.sh ./
