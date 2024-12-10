@@ -70,17 +70,14 @@ services:
 ```json
 [
    {
-      "username":"account-1@mail.com",
-      "password":"password-1"
+      "username":"account1@mail.com",
+      "password":"password1"
    },
    {
-      "username":"account-2@mail.com",
-      "password":"password-2",
-      "proxy":"http://user:pass@host2:port"
-   },
-   {
-      "username":"account-3@mail.com",
-      "password":"password-3"
+      "username":"account2@mail.com",
+      "password":"password2",
+      "totp":"0123 4567 89ab cdef",
+      "proxy":"http://user:pass@host1:port"
    }
 ]
 ```
