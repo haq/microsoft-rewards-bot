@@ -1,17 +1,21 @@
 #!/bin/sh
 
-# pull the latest version of the app
-git pull > /dev/null
+color() {
+    printf "\033[33m$1\033[0m\n"
+}
 
-# install any new dependencies
-pip install --root-user-action=ignore -r requirements.txt > /dev/null
+color "git pull"
+git pull --quiet
+
+color "pip install"
+pip install --root-user-action=ignore --no-cache-dir --quiet -r requirements.txt
 
 # set display port and dbus env to avoid hanging (https://github.com/joyzoursky/docker-python-chromedriver)
 export DISPLAY=:99
 export DBUS_SESSION_BUS_ADDRESS=/dev/null
 
-# start vxfb
+color "starting xvfb"
 Xvfb :99 -screen 0 1280x800x8 -nolisten tcp &
 
-# start the script
+color "starting script"
 exec "$@"
